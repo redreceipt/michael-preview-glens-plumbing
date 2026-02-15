@@ -52,6 +52,8 @@ a {
 .container {
   max-width: 1120px;
   margin: 0 auto;
+  /* Fallback padding for browsers that don't support `env()` (prevents edge-to-edge text). */
+  padding: 0 20px;
   padding-left: calc(20px + env(safe-area-inset-left));
   padding-right: calc(20px + env(safe-area-inset-right));
 }
@@ -80,13 +82,21 @@ a {
 .brand__text {
   min-width: 0;
 }
+.brand__logoWrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(237, 244, 248, 0.18);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
 .brand__logo {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 1px solid var(--line);
-  background: rgba(18, 27, 34, 0.6);
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
 }
 .brand__name {
   font-weight: 800;
