@@ -303,18 +303,34 @@ a {
 }
 .badges__row {
   margin-top: 10px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
 }
-.badges__img {
-  height: 42px;
-  width: auto;
-  border-radius: 10px;
+
+.badgeCard {
+  border: 1px solid var(--line);
+  background: rgba(18, 27, 34, 0.2);
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.badgeCard__img {
+  width: 100%;
+  height: 62px;
+  object-fit: contain;
+  border-radius: 12px;
   border: 1px solid rgba(237, 244, 248, 0.12);
   background: rgba(255, 255, 255, 0.92);
-  padding: 6px 10px;
+  padding: 8px 12px;
+}
+.badgeCard__text {
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+  font-size: 14px;
 }
 
 .contact {
@@ -326,30 +342,33 @@ a {
   flex-wrap: wrap;
   margin-top: 12px;
 }
-.contact__small {
-  margin-top: 12px;
-  color: var(--muted);
-}
-.contact__small a {
-  color: var(--ink);
-}
-
-.callout {
-  border-radius: var(--radius);
+.details {
+  margin-top: 14px;
   border: 1px solid var(--line);
-  background: rgba(18, 27, 34, 0.3);
-  padding: 16px;
-  box-shadow: var(--shadow);
-  margin-top: 16px;
+  background: rgba(18, 27, 34, 0.2);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: grid;
+  gap: 12px;
 }
-.callout__t {
-  font-weight: 900;
-  font-size: 18px;
+.details__item {
+  display: grid;
+  gap: 4px;
 }
-.callout__p {
-  margin-top: 10px;
+.details__k {
   color: var(--muted);
-  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.details__v {
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.details__v a {
+  color: var(--ink);
 }
 
 .foot {
@@ -453,6 +472,12 @@ a {
   }
   .sticky {
     display: flex;
+  }
+  .badges__row {
+    grid-template-columns: 1fr;
+  }
+  .badgeCard__img {
+    height: 76px;
   }
   /* Keep the footer from being covered by the sticky CTA bar on mobile. */
   .foot {
