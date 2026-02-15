@@ -454,4 +454,8 @@ a {
   .sticky {
     display: flex;
   }
+  /* Keep the footer from being covered by the sticky CTA bar on mobile. */
+  .foot {
+    padding-bottom: calc(140px + env(safe-area-inset-bottom));
+  }
 }
