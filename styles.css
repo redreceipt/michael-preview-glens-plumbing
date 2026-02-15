@@ -83,9 +83,9 @@ a {
   min-width: 0;
 }
 .brand__logoWrap {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
   background: #fff;
   display: grid;
   place-items: center;
@@ -93,8 +93,8 @@ a {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
 .brand__logo {
-  width: 34px;
-  height: 34px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   display: block;
 }
@@ -287,6 +287,34 @@ a {
 }
 .bullets li::marker {
   color: rgba(255, 200, 52, 0.85);
+}
+
+.badges {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.badges__label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--muted);
+}
+.badges__row {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.badges__img {
+  height: 42px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(237, 244, 248, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 6px 10px;
 }
 
 .contact {
