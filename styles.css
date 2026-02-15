@@ -378,19 +378,6 @@ a {
   padding: 5px 10px;
   background: rgba(18, 27, 34, 0.22);
 }
-.reviews__more {
-  margin: 14px 0 0;
-}
-.link {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(237, 244, 248, 0.22);
-  padding-bottom: 2px;
-}
-.link:hover {
-  color: var(--ink);
-  border-bottom-color: rgba(255, 200, 52, 0.55);
-}
 
 .contact {
   max-width: 860px;
