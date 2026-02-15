@@ -69,12 +69,16 @@ a {
   align-items: center;
   gap: 18px;
   padding: 14px 0;
+  flex-wrap: wrap;
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
   min-width: 260px;
+}
+.brand__text {
+  min-width: 0;
 }
 .brand__logo {
   width: 36px;
@@ -98,6 +102,11 @@ a {
   display: flex;
   gap: 10px;
   margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.actions .btn {
+  white-space: nowrap;
 }
 
 .btn {
@@ -134,7 +143,26 @@ a {
   border-bottom: 1px solid var(--line);
 }
 .hero__inner {
-  padding: 38px 0 18px;
+  padding: 34px 0 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.hero__media {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: linear-gradient(
+      180deg,
+      rgba(11, 18, 22, 0.25),
+      rgba(11, 18, 22, 0.85)
+    ),
+    url("./images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 16 / 9;
+  box-shadow: var(--shadow);
 }
 
 .eyebrow {
@@ -374,6 +402,16 @@ a {
   .section__head {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .top__inner {
+    gap: 10px;
+  }
+  .actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .actions .btn {
+    flex: 1;
   }
   .sticky {
     display: flex;
